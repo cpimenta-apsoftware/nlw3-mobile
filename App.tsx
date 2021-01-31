@@ -9,15 +9,16 @@ import { Nunito_600SemiBold, Nunito_700Bold, Nunito_800ExtraBold } from '@expo-g
 // import mapMarker from './src/images/map-marker.png';
 
 import Routes from './src/routes';
+import { NavigationContainer } from '@react-navigation/native';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
     Nunito_600SemiBold,
-    Nunito_700BoldExRenFont: Nunito_700Bold, 
+    Nunito_700BoldExRenFont: Nunito_700Bold,
     Nunito_800ExtraBold
   });
 
-  if(!fontsLoaded){
+  if (!fontsLoaded) {
     return null;
   }
 
@@ -64,7 +65,10 @@ export default function App() {
     //     </TouchableOpacity>
     //   </View>
     // </View>
-    <Routes />
+    <NavigationContainer>
+      <Routes />
+    </NavigationContainer>
+
   );
 }
 
