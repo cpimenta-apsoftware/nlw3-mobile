@@ -1,4 +1,4 @@
-export default function entrar() {
+export function entrar() {
   return new Promise(resolve => {
     setTimeout(() => {
       resolve({
